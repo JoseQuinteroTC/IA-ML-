@@ -586,7 +586,16 @@ print(classification_report(y_train, y_pred_train))
 print('----------------------------------------------------------')
 print(classification_report(y_test, y_pred_test))
 
+# Crear la matriz de confusión para el conjunto de prueba
+cm_test = confusion_matrix(y_test, y_pred_test)
 
+# Crear el mapa de calor para el conjunto de prueba
+plt.figure(figsize=(8, 6))
+sns.heatmap(cm_test, annot=True, cmap="Blues",fmt='d')
+plt.title("Matriz de Confusión - Conjunto de Prueba")
+plt.xlabel("Predicciones")
+plt.ylabel("Valores Verdaderos")
+plt.show()
 
 
 
