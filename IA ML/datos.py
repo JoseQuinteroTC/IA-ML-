@@ -48,8 +48,7 @@ df = pd.read_csv("train_new.txt",
                       delimiter = '|') 
   
 # storing this dataframe in a csv file 
-df.to_csv('hola.csv',  
-                  index = None) 
+df.to_csv('hola.csv',  index = None) 
 
 
 
